@@ -7,9 +7,9 @@
 
 <script>
 import Header from "./components/Header";
-import Footer from "./components/Footer.vue";
 import Carousel from "./components/Carousel/Carousel.vue";
-import Cards from "./components/Cards.vue";
+import Cards from "./components/Services/Cards.vue";
+import Footer from "./components/Footer.vue";
 import pic1 from "./assets/slider-pic1.jpg";
 import pic2 from "./assets/slider-pic2.jpg";
 import pic3 from "./assets/slider-pic3.jpg";

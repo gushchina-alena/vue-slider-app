@@ -16,14 +16,14 @@
 </script>
 
 <style scoped>
-.carousel-item img {
+img {
     width: 100%;
     height: 672px;
     margin-top: 30px;
     position: relative;
 }
 
-.carousel-item h1 {
+h1 {
     font-size: 64px;
     width: 790px;
     position: absolute;
@@ -33,5 +33,54 @@
 
 h1 span {
     color: #00A76B;
+}
+
+@media all and (max-width: 1400px) {
+    h1 {
+        font-size: 54px;
+        width: 700px;
+    }
+}
+
+@media all and (max-width: 1100px) { 
+    h1 {
+        font-size: 44px;
+        width: 460px;
+    }
+}
+
+@media all and (max-width: 950px) { 
+    img {
+        height: 500px;
+    }
+
+    h1 {
+        font-size: 38px;
+        width: 400px;
+        top: 480px;
+    }
+}
+
+@media all and (max-width: 700px) { 
+    img {
+        height: 370px;
+    }
+
+    h1 {
+        font-size: 30px;
+        width: 320px;
+        top: 430px;
+        left: 60px;
+    }
+}
+
+@media all and (max-width: 450px) { 
+    img {
+        height: 300px;
+    }
+
+    h1 {
+        display: none;
+    }
 }
 </style>

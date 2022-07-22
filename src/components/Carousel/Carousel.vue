@@ -1,6 +1,6 @@
 <template>
     <div class="carousel">
-        <div class="carousel-inner">
+        <div class="carousel__inner">
             <CarouselItem
                 v-for="(slide, index) in slides"
                 :slide="slide"
@@ -9,22 +9,19 @@
                 :index="index"
             >
             </CarouselItem>
-            <div class="controls">
+            <div class="carousel__controls">
                 <button v-on:click="onSliderClick(id)" 
                 v-for="(btn, id) in slides.length"
                 :class="{ active: currentSlide === id }"
-            ></button>
+                >
+                </button>
             </div>
-            
-            <!-- <CarouselControls :index="index" :current-slide="currentSlide"></CarouselControls> -->
         </div>
     </div>
 </template>
 
 <script>
 import CarouselItem from "./CarouselItem";
-import CarouselControls from "./CarouselControls.vue";
-
     export default {
         props: ["slides"],
         components: { CarouselItem },
@@ -55,7 +52,7 @@ button:hover,
     background-color: #00BB78;
 }
 
-.controls {
+.carousel__controls {
     display: flex;
     justify-content: center;
     align-items: center;

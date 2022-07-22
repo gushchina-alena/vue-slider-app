@@ -23,6 +23,7 @@
     align-items: center;
     justify-content: space-around;
 }
+
 p {
     font-size: 20px;
     font-weight: 600;
@@ -30,7 +31,30 @@ p {
     color: #000;
     cursor: pointer;
 }
+
 p:hover {
     color: #00BB78;
+}
+
+@media all and (max-width: 1400px) {
+    p {
+        font-size: 19px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    p {
+        font-size: 18px;
+    }
+
+    .card {
+        height: 360px;
+    }
+}
+
+@media all and (max-width: 450px) {
+    p {
+        text-align: center;
+    }
 }
 </style>

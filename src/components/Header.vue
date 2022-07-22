@@ -1,24 +1,15 @@
 <template>
-    <div class="header">
-        <img src="../assets/logo.svg" />
-        <div src="controls">
+    <header class="header">
+        <img src="../assets/logo.svg" alt="App logo" />
+        <div src="header__controls">
             <a href="#">Кейсы</a>
             <a href="#">Бизнесу</a>
             <a href="#">Услуги</a>
             <a href="#">Контакты</a>
-            <!-- <button>Заказать звонок</button> -->
-            <Button text="Заказать звонок"></Button>
+            <button>Заказать звонок</button>
         </div>
-    </div>
+    </header>
 </template>
-
-<script>
-    import Button from "./Button.vue";
-    export default {
-        name: "Header",
-        components: { Button }
-    }
-</script>
 
 <style scoped>
 .header {
@@ -47,5 +38,50 @@ a:nth-child(2)::before {
 a:hover {
     color: #00A76B;
     cursor: pointer;
+}
+
+button {
+    width: 200px;
+    height: 49px;
+    margin-left: 50px;
+    color: #00A76B;
+    background-color: transparent; 
+    border: 1.5px solid #00BB78;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+@media all and (max-width: 950px) {
+    .header { 
+        height: 300px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .header img {
+        width: 80px;
+        height: 80px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    a {
+        display: block;
+        padding-left: 0;
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    a:nth-child(2)::before {
+        content: none;
+    }
+
+    button {
+        margin-left: 0;
+        width: 180px;
+        height: 45px;
+        font-size: 16px;
+    }
 }
 </style>
